@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 *,
 *::after,
 *::before {
@@ -8,5 +10,131 @@
 
 body {
   background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin: 20px auto;
+  width: 350px;
+}
+
+h1 {
+  margin: 0;
+  text-decoration: underline;
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+}
+
+.inc-exp-container h4 {
+  border: none;
+  padding-bottom: 0;
+}
+
+.inc-exp-container {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid lightgrey;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.money-plus {
+  color: rgb(76, 187, 23);
+}
+
+.money-minus {
+  color: red;
+}
+
+.list {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+.list li {
+  background-color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.minus {
+  border-right: 5px solid red;
+}
+
+.plus {
+  border-right: 5px solid rgb(76, 187, 23);
+}
+
+.delete-btn {
+  border: 0;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  padding: 2.5px 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-120%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+input {
+  display: block;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 7.5px;
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+}
+
+.btn {
+  margin: 15px 0;
+  padding: 7.5px;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: royalblue;
+  color: white;
+  font-weight: bold;
+  border: 0;
+  border-radius: 5px;
 }
